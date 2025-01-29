@@ -1,0 +1,55 @@
+/* General styles */
+.App {
+    text-align: center;
+  }
+  
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px; /* Adjust spacing between cards */
+  }
+  
+  .card {
+    flex: 1 1 300px; /* Flex basis of 300px, but allowed to grow and shrink */
+    margin: 40px; /* Margin around each card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
+  }
+  
+  .card-img-top {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .small-img {
+    max-height: 200px; /* Adjust height of images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) { /* Adjustments for tablets and below */
+    .card-deck {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%; /* Makes cards take more space on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) { /* Adjustments for small devices like mobile phones */
+    .card {
+      width: 100%; /* Cards take full width on small screens */
+    }
+  }
+  

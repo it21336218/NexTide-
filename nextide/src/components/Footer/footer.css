@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Aligns the content in a column */
+  }
+  
+  body {
+    flex: 1; /* Allows the body to expand and push the footer to the bottom */
+  }
+  
+  .footer {
+    background-color: lightblue;
+    color: white;
+    padding: 20px 10px; /* Default padding, adjusts on smaller screens */
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+  }
+  
+  .footer h2 {
+    color: white;
+    margin: 0;
+  }
+  
+  .footer a {
+    color: white;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) { /* Adjustments for tablets */
+    .footer {
+      padding: 15px 10px; /* Slightly smaller padding */
+    }
+  
+    .footer h2 {
+      font-size: 18px; /* Smaller font size for smaller screens */
+    }
+  
+    .footer a {
+      font-size: 16px; /* Adjust font size for readability */
+    }
+  }
+  
+  @media (max-width: 768px) { /* Adjustments for smaller tablets and large phones */
+    .footer {
+      padding: 10px 5px;
+    }
+  
+    .footer h2,
+    .footer a {
+      font-size: 15px; /* Even smaller font sizes for smaller devices */
+    }
+  }
+  
+  @media (max-width: 480px) { /* Adjustments for mobile phones */
+    .footer {
+      padding: 10px 5px;
+    }
+  
+    .footer h2 {
+      font-size: 14px; /* Small screen adjustments */
+    }
+  
+    .footer a {
+      font-size: 12px;
+    }
+  }
+  

@@ -1,0 +1,200 @@
+.navbarbox {
+    height: 50px;
+    width: 100%;
+    background-color: #1665cd;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: var(--bs-navbar-brand-font-size);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbarleft, .navbarright, .navbarcenter {
+    display: flex;
+    align-items: center;
+}
+
+.navbarleft {
+    flex: 3;
+}
+
+.navbarcenter {
+    flex: 5;
+}
+
+.navbarright {
+    flex: 2;
+    margin-right: 30px;
+    padding-right: 10px; /* Provides some padding on the right */
+}
+
+.searchbarbox {
+    display: flex;
+    align-items: center;
+    background-color: #fff; 
+    border-radius: 20px;
+    padding: 0 10px;
+    width: 100%; 
+    max-width: 460px; 
+    margin-left: 10px;
+}
+
+.searchicon {
+    color: #1877F2; 
+    margin-right: 10px;
+}
+
+.searchbar {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    width: calc(100% - 20px); 
+    padding: 0; 
+}
+
+.logo {
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.profilepicimage {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left:329px; /* Automatically align to the right within its container */
+    cursor: pointer;
+}
+
+.nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: rgb(0, 0, 0);
+}
+
+.navbarlink:hover {
+    color: #a8dadc;
+}
+
+.navbaricons{
+    display: flex;
+    margin-left: 32px;
+}
+
+.PersonIcon{
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.badge {
+    --bs-badge-padding-x: 0.65em;
+    --bs-badge-padding-y: 0.35em;
+    --bs-badge-font-size: 0.75em;
+    --bs-badge-font-weight: 700;
+    --bs-badge-color: #ffffff; /* Red color for the number */
+    --bs-badge-background-color: #000000; /* White background for the badge */
+    --bs-badge-border-radius: 0.25rem; /* Define a specific value for border radius */
+    display: inline-block;
+    padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+    font-size: var(--bs-badge-font-size);
+    font-weight: var(--bs-badge-font-weight);
+    line-height: 1;
+    background-color: var(--bs-badge-background-color);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: var(--bs-badge-border-radius);
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%; /* Adjusted to full width */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .searchbarbox {
+        margin-right: 20px; /* Reduce the margin to accommodate smaller widths */
+    }
+
+    .searchbar {
+        width: 100%; /* Allow search bar to fill available space */
+    }
+
+    .profilepicimage {
+        margin-left: 10px; /* Reduce the left margin to keep it within view */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbarbox {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0; /* Add padding to separate items vertically */
+    }
+
+    .navbarleft, .navbarcenter, .navbarright {
+        width: 100%; 
+        justify-content: center;
+        margin: 5px 0; /* Add margin for spacing between wrapped items */
+    }
+
+    .searchbarbox {
+        margin-top: 10px;
+        width: 90%; /* Reduce width to ensure padding around the container */
+    }
+
+    .profilepicimage {
+        margin: 10px auto; /* Center align in the available space */
+    }
+
+    .navbarlink {
+        margin: 5px 0; /* Ensure links have vertical spacing when stacked */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    .searchbarbox {
+        padding: 5px;
+    }
+
+    .searchbar {
+        width: 100%;
+    }
+
+    .navbarlink {
+        font-size: 14px; 
+        padding: 3px 5px; /* Reduce padding to handle smaller screens */
+    }
+}
